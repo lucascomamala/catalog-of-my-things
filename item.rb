@@ -31,6 +31,6 @@ class Item
   # Returns true if publish date is greater than 10 years
   def can_be_archived?
     current_year = Date.today.year
-    current_year - @publish_date.year > 10 ? true : false
+    current_year - @publish_date.year > 10
   end
 end
