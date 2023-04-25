@@ -43,4 +43,29 @@ module GameModule
     # Adds our game object to our games array
     @games << game
   end
+
+  def list_games
+    if @games.empty?
+      puts "\nNo added games yet! Please add some games."
+    else
+      puts "\nList of all games:"
+      @games.each_with_index do |g, i|
+        puts '{'
+        puts "  Index: #{i + 1}"
+        puts "  ID: #{g.id}"
+        # puts "  Title: #{g.label.title}"
+        # puts "  Color: #{g.label.color}"
+        # puts "  Genre: #{g.genre.name}"
+        puts "  Author: #{g.author.first_name} #{g.author.last_name}"
+        puts "  Multiplayer?: #{g.multiplayer}"
+        puts "  Publish Date: #{g.publish_date}"
+        puts "  Last Played At: #{g.last_played}"
+        puts "  Archived: #{g.archived}"
+        puts '}'
+      end
+    end
+    
+    puts "\nPress Enter to return to main menu..."
+    gets.chomp
+  end
 end
