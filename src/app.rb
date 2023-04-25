@@ -23,6 +23,7 @@ class App
     8 => :add_music,
     9 => :add_movie,
     10 => :add_game
+    11 => 'exit'
   }.freeze
 
   def run
