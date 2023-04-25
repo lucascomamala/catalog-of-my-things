@@ -1,18 +1,31 @@
 require 'date'
 
 class Item
-  attr_reader :id
-  attr_accessor :genre, :author, :label, :publish_date
+  attr_reader :id, :archived
+  attr_accessor :publish_date
 
   # Constructor for Item object
   # Dates should saved as a Date object: Date.parse(YYYY/MM/DD)
-  def initialize(genre: 'Unknown', author: 'Unknown', label: 'Unknown', publish_date: 'Unknown')
+  def initialize(publish_date: Date.today)
     @id = Random.rand(1..1000)
-    @genre = genre
-    @author = author
-    @label = label
     @publish_date = publish_date
     @archived = false
+  end
+
+  # Custom setters for our properties in the 1-to-many relationsips
+  def genre=(genre)
+    @genre = genre
+    genre.items << self unless genre.items.include?(self)
+  end
+
+  def author=(author)
+    @author = author
+    author.items << self unless author.items.include?(self)
+  end
+
+  def label=(label)
+    @label = label
+    label.items << self unless label.items.include?(self)
   end
 
   # Archives our item if the private method returns true

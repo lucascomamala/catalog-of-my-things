@@ -3,6 +3,15 @@ require_relative 'menu'
 class App
   include Menu
 
+  def initialize
+    @games = []
+    @music_albums = []
+    @books = []
+    @genres = []
+    @labels = []
+    @authors = []
+  end
+
   HASH = {
     1 => :list_books,
     2 => :list_music,
@@ -14,7 +23,6 @@ class App
     8 => :add_music,
     9 => :add_movie,
     10 => :add_game
-
   }.freeze
 
   def run
