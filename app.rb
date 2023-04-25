@@ -1,19 +1,19 @@
-require_relative 'menu.rb'
+require_relative 'menu'
 
 class App
   include Menu
 
   HASH = {
-      1 => :list_books,
-      2 => :list_music,
-      3 => :list_games,
-      4 => :list_genres,
-      5 => :list_labes,
-      6 => :list_authors,
-      7 => :add_books,
-      8 => :add_music,
-      9 => :add_movie,
-      10 => :add_game,
+    1 => :list_books,
+    2 => :list_music,
+    3 => :list_games,
+    4 => :list_genres,
+    5 => :list_labes,
+    6 => :list_authors,
+    7 => :add_books,
+    8 => :add_music,
+    9 => :add_movie,
+    10 => :add_game
 
   }.freeze
 
