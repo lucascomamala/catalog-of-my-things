@@ -1,15 +1,20 @@
 require_relative 'menu'
+require_relative 'modules/game_module'
+require_relative 'associations/author'
 
 class App
   include Menu
+  include GameModule
 
   def initialize
+    author = Author.new(first_name: 'lu', last_name: 'co')
     @games = []
     @music_albums = []
     @books = []
     @genres = []
     @labels = []
     @authors = []
+    @authors << author
   end
 
   HASH = {

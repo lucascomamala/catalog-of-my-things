@@ -39,5 +39,9 @@ module GameModule
     title = gets.chomp
     puts 'Enter the game label color: '
     color = gets.chomp
+
+    # Creates our game object and its it to our @games instance array
+    game = Game.new(publish_date: publish_date, multiplayer: multiplayer, last_played: last_played)
+    @games << game
   end
 end
