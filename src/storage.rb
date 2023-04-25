@@ -7,10 +7,8 @@ class Storage
     file = File.read("./data/#{class_name}.json")
     JSON.parse(file, create_additions: true)
   end
-  
+
   def save_data(class_name, data)
-    File.open("./data/#{class_name}.json", 'w') do |file|
-      file.write(JSON.generate(data))
-    end
+    File.write("./data/#{class_name}.json", JSON.generate(data))
   end
 end
