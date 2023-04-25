@@ -2,6 +2,7 @@ require_relative 'menu'
 require_relative 'modules/game_module'
 require_relative 'modules/author_module'
 require_relative 'associations/author'
+require_relative 'storage'
 
 class App
   include Menu
@@ -35,11 +36,24 @@ class App
     show_options
     option = gets.chomp.to_i
 
+    # Infinite loop until user selects exit
     while option != 11
       select_option(option)
       show_options
       option = gets.chomp.to_i
     end
+
+    # Save data once exit has been selected
+    save_all_data
+  end
+
+  def save_all_data
+    Storage.save_data('games', @games) unless @games.empty?
+    Storage.save_data('authors', @authors) unless @authors.empty?
+    Storage.save_data('music_albums', @music_albums) unless @music_albums.empty?
+    Storage.save_data('genres', @genres) unless @genres.empty?
+    Storage.save_data('labels', @labels) unless @labels.empty?
+    Storage.save_data('books', @books) unless @books.empty?
   end
 
   def select_option(option)
