@@ -1,4 +1,4 @@
-require_relative '../item'
+require_relative '../items/item'
 
 class Label
   attr_accessor :title, :color
@@ -13,6 +13,6 @@ class Label
 
   def add_item(item)
     @items << item unless @items.include?(item)
-    item.Label = self
+    item.label = self
   end
 end
