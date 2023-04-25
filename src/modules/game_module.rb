@@ -4,13 +4,31 @@ require_relative '../associations/author'
 
 module GameModule
   def add_game
+    p @authors
+    # Gets publish date and validates it
     puts "Enter game publish date (YYYY/MM/DD): "
-    publish_date = gets.chomp
+    begin
+      publish_date = Date.parse(gets.chomp)
+    rescue ArgumentError
+      puts "Invalid date format. Please try again (YYYY/MM/DD): "
+      retry
+    end
+    # Gets multiplayer bool and validates it
     puts "Is it a multiplayer game (y/n): "
     multiplayer = gets.chomp.downcase
+    while multiplayer != 'y' && multiplayer != 'n'
+      puts "Invalid choice. Please try again (y/n): "
+      multiplayer = gets.chomp.downcase
+    end
     multiplayer = multiplayer == 'y' ? true : false
+    # Gets last played date and validates it
     puts "Enter the last time you played the game (YYYY/MM/DD): "
-    last_played = gets.chomp
+    begin
+      last_played = Date.parse(gets.chomp)
+    rescue ArgumentError
+      puts "Invalid date format. Please try again (YYYY/MM/DD): "
+      retry
+    end
     puts 'Enter the game genre: '
     genre = gets.chomp
     puts 'Enter game creator first name: '
