@@ -1,6 +1,5 @@
-require_relative '../items/item'
 class Genre
-  attr_accessor :name, :items
+  attr_accessor :name
   attr_reader :id, :items
 
   def initialize(name)
