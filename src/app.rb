@@ -1,10 +1,12 @@
 require_relative 'menu'
 require_relative 'modules/game_module'
+require_relative 'modules/author_module'
 require_relative 'associations/author'
 
 class App
   include Menu
   include GameModule
+  include AuthorModule
 
   def initialize
     @games = []
