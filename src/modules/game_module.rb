@@ -32,22 +32,9 @@ module GameModule
     @games << game
 
     # Creates our genre, author and label objects and adds them to their respective instance arrays
-    @authors.each do |a|
-      author = if a.first_name == first_name && a.last_name == last_name
-                 a
-               else
-                 Author.new(first_name: first_name, last_name: last_name)
-               end
-    end
-    @authors << author unless @authors.include?(author)
-    # genre = Genre.new(name: genre)
-    # @genres << genre unless @genres.include?(genre)
-    # label = Label.new(title: title, color: color)
-    # @labels << label unless @labels.include?(label)
+    author = author_select(first_name, last_name)
     game.author = author
-    # game.genre = genre
-    # game.label = label
-    p game
-    p @authors
+
+    # TODO: Label and Genre
   end
 end
