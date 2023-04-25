@@ -10,7 +10,7 @@ class Game < Item
   end
 
   private
-  
+
   # Overwrite of can_be_archived? method
   # Returns true if the parent is true AND last_played is greater than 2 years
   def can_be_archived?
