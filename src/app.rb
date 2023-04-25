@@ -7,14 +7,12 @@ class App
   include GameModule
 
   def initialize
-    author = Author.new(first_name: 'lu', last_name: 'co')
     @games = []
     @music_albums = []
     @books = []
     @genres = []
     @labels = []
     @authors = []
-    @authors << author
   end
 
   HASH = {
