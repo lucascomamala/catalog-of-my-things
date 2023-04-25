@@ -64,7 +64,7 @@ module GameModule
         puts '}'
       end
     end
-    
+
     puts "\nPress Enter to return to main menu..."
     gets.chomp
   end
