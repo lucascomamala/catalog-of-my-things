@@ -28,3 +28,25 @@ CREATE TABLE game (
   last_played_at DATE,
   PRIMARY KEY(id)
 );
+
+--CREATE TABLE Label
+CREATE TABLE labels(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  title VARCHAR(100) NOT NULL,
+  color VARCHAR(100) NOT NULL,
+  PRIMARY KEY(id)
+);
+
+--CREATE TABLE Book
+CREATE TABLE books (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  title VARCHAR(200) NOT NULL,
+  genre INT REFERENCES genre(id),
+  author INT REFERENCES author(id),
+  label INT REFERENCES label(id),
+  publish_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL,
+  publisher VARCHAR(200) NOT NULL,
+  cover_state VARCHAR(4) NOT NULL,
+  PRIMARY KEY(id)
+);
