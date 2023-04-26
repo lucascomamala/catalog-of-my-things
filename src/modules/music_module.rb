@@ -30,11 +30,11 @@ module MusicModule
 
   def list_music
     if @music_albums.empty?
-        puts "\nNo music_albums added yet! Please add some music."
-      else
-        puts "\nList of all music_albums:"
-        @music_albums.each do |album|
-            puts '{'
+      puts "\nNo music_albums added yet! Please add some music."
+    else
+      puts "\nList of all music_albums:"
+      @music_albums.each do |album|
+        puts '{'
         puts "  ID: #{album.id}"
         puts "  on_spotify?: #{album.on_spotify}"
         puts "  Publish Date: #{album.publish_date}"
@@ -44,5 +44,5 @@ module MusicModule
     end
     puts "\nPress Enter to return to main menu..."
     gets.chomp
-end
+  end
 end
