@@ -36,3 +36,17 @@ CREATE TABLE label(
   color VARCHAR(100) NOT NULL,
   PRIMARY KEY(id)
 );
+
+--CREATE TABLE Book
+CREATE TABLE book (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  title VARCHAR(200) NOT NULL,
+  genre INT REFERENCES genre(id),
+  author INT REFERENCES author(id),
+  label INT REFERENCES label(id),
+  publish_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL,
+  publisher VARCHAR(200) NOT NULL,
+  cover_state VARCHAR(4) NOT NULL,
+  PRIMARY KEY(id)
+);
