@@ -6,7 +6,7 @@ class Item
 
   # Constructor for Item object
   # Dates should saved as a Date object: Date.parse(YYYY/MM/DD)
-  def initialize(publish_date: Date.today)
+  def initialize(publish_date)
     @id = Random.rand(1..1000)
     @publish_date = publish_date
     @archived = false

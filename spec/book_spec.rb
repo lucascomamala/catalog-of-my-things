@@ -2,11 +2,11 @@ require_relative '../src/items/book'
 
 describe Book do
   before(:each) do
-    @book = Book.new('Fault in our Stars', 'John Green', 'bad')
+    @book = Book.new('Fault in our Stars', 'John Green', 'bad', Date.new(2023, 0o4, 26))
   end
 
   describe '#new' do
-    it 'should inialize the book class' do
+    it 'should initialize the book class' do
       expect(@book).to be_an_instance_of(Book)
     end
   end
