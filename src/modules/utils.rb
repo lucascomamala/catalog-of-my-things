@@ -41,13 +41,13 @@ module Utils
   end
 
   def genre_select(name)
-    # Iterates through music_albums and returns the music_album if found
-    @music_albums.each do |m|
-      return m if m.name == name
+    # Iterates through genre and returns the genre if found
+    @genres.each do |g|
+      return g if g.name == name
     end
     # If no music_album was found, we create and return new one
     genre = Genre.new(name: name)
-    @music_albums << genre
+    @genres << genre
     genre
   end
 end
