@@ -18,7 +18,9 @@ module BookModule
   end
 
   def list_books
-    puts 'No books added yet! Please add some books' if @books.empty?
-    @books.each { |book| puts "Title: #{book.title}, Publisher: #{book.publisher}" }
+    puts 'No Books added yet! Please add some books' if @books.empty?
+    @books.each do |book|
+      puts "Title: #{book.title}, Publisher: #{book.publisher}, Cover State: #{book.cover_state.upcase}"
+    end
   end
 end
