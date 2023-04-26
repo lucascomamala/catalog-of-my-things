@@ -9,6 +9,7 @@ def main
   app.run
 
   puts 'Thank you for using our app!'
+  app.preserve_data
   exit
 end
 

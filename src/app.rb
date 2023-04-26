@@ -8,7 +8,13 @@ require_relative 'modules/music_module'
 require_relative 'associations/genre'
 require_relative 'modules/genre_module'
 
+require 'json'
+require_relative 'storage/storage'
+
+
 class App
+  attr_accessor :books, :labels
+
   include Menu
   include GameModule
   include AuthorModule
@@ -16,13 +22,15 @@ class App
   include LabelModule
   include MusicModule
   include GenreModule
+  include Storage
+
 
   def initialize
     @games = []
     @music_albums = []
-    @books = []
+    @books = load_books || []
     @genres = []
-    @labels = []
+    @labels = load_labels || []
     @authors = []
   end
 
