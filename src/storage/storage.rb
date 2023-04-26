@@ -14,6 +14,10 @@ module Storage
     end
 
     def save_labels
+        file = './src/json/labels.json'
+        labels_object = []
+        @labels.each { |label| labels_object << { title: label.title, color: label.color } }
+        file.write{file, labels_object.to_json}
     end
 
     def load_books
