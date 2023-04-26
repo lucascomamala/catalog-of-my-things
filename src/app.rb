@@ -4,20 +4,25 @@ require_relative 'modules/author_module'
 require_relative 'associations/author'
 require_relative 'modules/book_module'
 require_relative 'modules/label_module'
+require 'json'
+require_relative 'storage/storage'
 
 class App
+  attr_accessor :books, :labels
+
   include Menu
   include GameModule
   include AuthorModule
   include BookModule
   include LabelModule
+  include Storage
 
   def initialize
     @games = []
     @music_albums = []
-    @books = []
+    @books = load_books || []
     @genres = []
-    @labels = []
+    @labels = load_labels || []
     @authors = []
   end
 
