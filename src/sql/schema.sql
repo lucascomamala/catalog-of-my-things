@@ -28,3 +28,11 @@ CREATE TABLE game (
   last_played_at DATE,
   PRIMARY KEY(id)
 );
+
+--CREATE TABLE Label
+CREATE TABLE label(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  title VARCHAR(100) NOT NULL,
+  color VARCHAR(100) NOT NULL,
+  PRIMARY KEY(id)
+);
