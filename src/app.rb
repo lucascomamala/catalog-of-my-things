@@ -2,11 +2,15 @@ require_relative 'menu'
 require_relative 'modules/game_module'
 require_relative 'modules/author_module'
 require_relative 'associations/author'
+require_relative 'modules/book_module'
+require_relative 'modules/label_module'
 
 class App
   include Menu
   include GameModule
   include AuthorModule
+  include BookModule
+  include LabelModule
 
   def initialize
     @games = []
@@ -22,9 +26,9 @@ class App
     2 => :list_music,
     3 => :list_games,
     4 => :list_genres,
-    5 => :list_labes,
+    5 => :list_labels,
     6 => :list_authors,
-    7 => :add_books,
+    7 => :add_book,
     8 => :add_music,
     9 => :add_movie,
     10 => :add_game,
