@@ -4,6 +4,8 @@ require_relative 'modules/author_module'
 require_relative 'associations/author'
 require_relative 'modules/book_module'
 require_relative 'modules/label_module'
+require_relative 'modules/music_module'
+require_relative 'associations/genre'
 
 class App
   include Menu
@@ -11,6 +13,7 @@ class App
   include AuthorModule
   include BookModule
   include LabelModule
+  include MusicModule
 
   def initialize
     @games = []
