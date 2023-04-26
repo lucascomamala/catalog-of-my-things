@@ -1,4 +1,4 @@
-require_relative '../src/items/book'
+require_relative './items/book'
 
 describe Book do
   before(:each) do
