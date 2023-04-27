@@ -43,7 +43,7 @@ module Utils
   def genre_select(name)
     # Iterates through genre and returns the genre if found
     @genres.each do |g|
-      return g if g.name == name
+      return g if g.name.downcase == name.downcase
     end
     # If no music_album was found, we create and return new one
     genre = Genre.new(name: name)
