@@ -37,9 +37,11 @@ module GameModule
     # Selects our genre, author and label objects (or creates them if they don't exist) and sets them in out game object
     author = author_select(first_name, last_name)
     game.author = author
-
-    # TODO: Label and Genre
-
+    genre = genre_select(genre)
+    game.genre = genre
+    label = label_select(title, color)
+    game.label = label
+    
     # Adds our game object to our games array
     @games << game
   end
@@ -53,9 +55,9 @@ module GameModule
         puts '{'
         puts "  Index: #{i + 1}"
         puts "  ID: #{g.id}"
-        # puts "  Title: #{g.label.title}"
-        # puts "  Color: #{g.label.color}"
-        # puts "  Genre: #{g.genre.name}"
+        puts "  Title: #{g.label.title}"
+        puts "  Color: #{g.label.color}"
+        puts "  Genre: #{g.genre.name}"
         puts "  Author: #{g.author.first_name} #{g.author.last_name}"
         puts "  Multiplayer?: #{g.multiplayer}"
         puts "  Publish Date: #{g.publish_date}"
