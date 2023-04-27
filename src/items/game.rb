@@ -9,6 +9,12 @@ class Game < Item
     @last_played = last_played
   end
 
+  def to_s
+    { multiplayer: @multiplayer, last_played: @last_played, publish_date: @publish_date,
+      archived: @archived, genre: { name: @genre.name }, label: { title: @label.title, color: @label.color },
+      author: { first_name: @author.first_name, last_name: @author.last_name } }
+  end
+
   private
 
   # Overwrite of can_be_archived? method

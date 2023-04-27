@@ -41,13 +41,24 @@ module Utils
   end
 
   def genre_select(name)
-    # Iterates through genre and returns the genre if found
+    # Iterates through genres and returns the genre if found
     @genres.each do |g|
-      return g if g.name == name
+      return g if g.name.downcase == name.downcase
     end
-    # If no music_album was found, we create and return new one
-    genre = Genre.new(name: name)
+    # If no genre was found, we create and return new one
+    genre = Genre.new(name)
     @genres << genre
     genre
+  end
+
+  def label_select(title, color)
+    # Iterates through labels and returns the label if found
+    @labels.each do |l|
+      return l if l.title.downcase == title.downcase && l.color.downcase == color.downcase
+    end
+    # If no label was found, we create and return new one
+    label = Label.new(title, color)
+    @labels << label
+    label
   end
 end

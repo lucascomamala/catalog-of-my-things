@@ -6,6 +6,46 @@ module Storage
     puts "All the data has been saved successfully.\n"
     save_books
     save_labels
+    save_data('games')
+    save_data('authors')
+  end
+
+  def save_data(class_name)
+    file_path = "./src/json/#{class_name}.json"
+    object = []
+    instance_variable_get("@#{class_name}").each do |item|
+      object << item.to_s
+    end
+    FileUtils.mkdir_p(File.dirname(file_path))
+    File.write(file_path, JSON.pretty_generate(object))
+  end
+
+  def load_games
+    file = './src/json/games.json'
+    list = []
+    if File.exist?(file) && !File.empty?(file)
+      JSON.parse(File.read(file)).each do |item|
+        game = Game.new(publish_date: item['publish_date'], multiplayer: item['multiplayer'], last_played: item['last_played'])
+        game.archived = item['archived']
+        game.label = label_select(item['label']['title'], item['label']['color'])
+        game.genre = genre_select(item['genre']['name'])
+        game.author = author_select(item['author']['first_name'], item['author']['last_name'])
+        list << game
+      end
+    end
+    list
+  end
+
+  def load_authors
+    file = './src/json/authors.json'
+    list = []
+    if File.exist?(file) && !File.empty?(file)
+      JSON.parse(File.read(file)).each do |item|
+        author = Author.new(first_name: item['first_name'], last_name: item['last_name'])
+        list << author
+      end
+    end
+    list
   end
 
   def save_books
@@ -16,7 +56,7 @@ module Storage
                         publish_date: book.publish_date }
     end
     FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, books_object.to_json)
+    File.write(file_path, JSON.pretty_generate(books_object))
   end
 
   def save_labels
@@ -24,7 +64,7 @@ module Storage
     labels_object = []
     @labels.each { |label| labels_object << { title: label.title, color: label.color } }
     FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, labels_object.to_json)
+    File.write(file_path, JSON.pretty_generate(labels_object))
   end
 
   def load_books
