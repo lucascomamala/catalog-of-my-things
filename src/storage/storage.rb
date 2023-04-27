@@ -67,8 +67,8 @@ module Storage
     list = []
     if File.exist?(file) && !File.empty?(file)
       JSON.parse(File.read(file)).each do |item|
-        genres = Genre.new(item)
-        list << genres
+        genre = Genre.new(item['name'])
+        list << genre
       end
     end
     list
