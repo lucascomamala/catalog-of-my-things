@@ -4,5 +4,11 @@
     "publisher": "John Green",
     "cover_state": "bad",
     "publish_date": "2018/11/11"
+  },
+  {
+    "title": "me",
+    "publisher": "you",
+    "cover_state": "",
+    "publish_date": "20230223"
   }
 ]

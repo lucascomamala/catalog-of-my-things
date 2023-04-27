@@ -12,4 +12,8 @@ class Genre
     @items << item
     item.genre = self
   end
+
+  def to_s
+    { name: @name }
+  end
 end
