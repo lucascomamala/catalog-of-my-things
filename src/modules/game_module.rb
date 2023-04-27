@@ -54,8 +54,6 @@ module GameModule
       puts "\nList of all games:"
       @games.each_with_index do |g, i|
         puts '{'
-        puts "  Index: #{i + 1}"
-        puts "  ID: #{g.id}"
         puts "  Title: #{g.label.title}"
         puts "  Color: #{g.label.color}"
         puts "  Genre: #{g.genre.name}"
@@ -63,7 +61,7 @@ module GameModule
         puts "  Multiplayer?: #{g.multiplayer}"
         puts "  Publish Date: #{g.publish_date}"
         puts "  Last Played At: #{g.last_played}"
-        puts "  Archived: #{g.archived}"
+        puts "  Archived?: #{g.archived}"
         puts '}'
       end
     end

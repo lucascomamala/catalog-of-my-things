@@ -57,7 +57,7 @@ module Utils
       return l if l.title.downcase == title.downcase && l.color.downcase == color.downcase
     end
     # If no label was found, we create and return new one
-    label = Label.new(tite, color)
+    label = Label.new(title, color)
     @labels << label
     label
   end
