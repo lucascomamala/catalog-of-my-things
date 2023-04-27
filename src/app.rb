@@ -27,7 +27,7 @@ class App
   def initialize
     @labels = load_labels || []
     @genres = []
-    @authors = []
+    @authors = load_authors || []
     @games = load_games || []
     @music_albums = []
     @books = load_books || []

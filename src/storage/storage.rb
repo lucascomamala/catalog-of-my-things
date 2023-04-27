@@ -36,6 +36,18 @@ module Storage
     list
   end
 
+  def load_authors
+    file = "./src/json/authors.json"
+    list = []
+    if File.exist?(file) && !File.empty?(file)
+      JSON.parse(File.read(file)).each do |item|
+        author = Author.new(first_name: item['first_name'], last_name: item['last_name'])
+        list << author
+      end
+    end
+    list
+  end
+
   def save_books
     file_path = './src/json/books.json'
     books_object = []
