@@ -8,6 +8,10 @@ class MusicAlbum < Item
     @on_spotify = on_spotify
   end
 
+  def to_s
+    { on_spotify: @on_spotify, publish_date: @publish_date, archived: @archived }
+  end
+
   private
 
   # Overwrite of can_be_archived? method

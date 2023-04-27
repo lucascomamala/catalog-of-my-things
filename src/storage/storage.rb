@@ -8,6 +8,8 @@ module Storage
     save_labels
     save_data('games')
     save_data('authors')
+    save_data('music_albums')
+    save_data('genres')
   end
 
   def save_data(class_name)
@@ -66,12 +68,11 @@ module Storage
     if File.exist?(file) && !File.empty?(file)
       JSON.parse(File.read(file)).each do |item|
         genres = Genre.new(item)
-        list << music_album
+        list << genres
       end
     end
     list
   end
-
 
   def save_books
     file_path = './src/json/books.json'
