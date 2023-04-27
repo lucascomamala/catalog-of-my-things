@@ -56,7 +56,7 @@ module Storage
                         publish_date: book.publish_date }
     end
     FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, books_object.to_json)
+    File.write(file_path, JSON.pretty_generate(books_object))
   end
 
   def save_labels
@@ -64,7 +64,7 @@ module Storage
     labels_object = []
     @labels.each { |label| labels_object << { title: label.title, color: label.color } }
     FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, labels_object.to_json)
+    File.write(file_path, JSON.pretty_generate(labels_object))
   end
 
   def load_books
