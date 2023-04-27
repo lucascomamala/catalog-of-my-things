@@ -1,6 +1,7 @@
 require 'json'
 require 'fileutils'
 
+# rubocop:disable Metrics/ModuleLength
 module Storage
   def preserve_data
     puts "All the data has been saved successfully.\n"
@@ -67,8 +68,13 @@ module Storage
     list = []
     if File.exist?(file) && !File.empty?(file)
       JSON.parse(File.read(file)).each do |item|
+<<<<<<< HEAD
         genres = Genre.new(item['name'])
         list << genres
+=======
+        genre = Genre.new(item['name'])
+        list << genre
+>>>>>>> fc2b6a5dbc1f74b4e9278a7b36ffc7a4fd8507b8
       end
     end
     list
@@ -114,4 +120,5 @@ module Storage
     end
     list_labels
   end
+  # rubocop:enable Metrics/ModuleLength
 end

@@ -42,12 +42,11 @@ module Utils
 
   def genre_select(name)
     # Iterates through genres and returns the genre if found
-
     @genres.each do |g|
       return g if g.name.downcase == name.downcase
     end
     # If no genre was found, we create and return new one
-    genre = Genre.new(name)
+    genre = Genre.new(item['name'])
     @genres << genre
     genre
   end
