@@ -50,3 +50,22 @@ CREATE TABLE books (
   cover_state VARCHAR(4) NOT NULL,
   PRIMARY KEY(id)
 );
+
+-- Music Album class table
+CREATE TABLE music_album (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  genre INT REFERENCES genre(id),
+  author INT REFERENCES author(id),
+  label INT REFERENCES label(id),
+  on_spotify BOOLEAN,
+  publish_date DATE,
+  archived BOOLEAN,
+  PRIMARY KEY(id)
+);
+
+-- Genre class table
+CREATE TABLE genre (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(100),
+  PRIMARY KEY(id)
+);
