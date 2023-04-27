@@ -53,14 +53,19 @@ CREATE TABLE books (
 
 -- Music Album class table
 CREATE TABLE music_album (
-  id SERIAL PRIMARY KEY,
+  id INT GENERATED ALWAYS AS IDENTITY,
+  genre INT REFERENCES genre(id),
+  author INT REFERENCES author(id),
+  label INT REFERENCES label(id),
   on_spotify BOOLEAN,
   publish_date DATE,
   archived BOOLEAN,
+  PRIMARY KEY(id)
 );
 
 -- Genre class table
 CREATE TABLE genre (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100)
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(100),
+  PRIMARY KEY(id)
 );
