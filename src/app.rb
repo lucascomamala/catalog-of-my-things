@@ -26,10 +26,10 @@ class App
 
   def initialize
     @labels = load_labels || []
-    @genres = []
+    @genres = load_genres || []
     @authors = load_authors || []
     @games = load_games || []
-    @music_albums = []
+    @music_albums = load_music || []
     @books = load_books || []
   end
 

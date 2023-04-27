@@ -42,6 +42,7 @@ module Utils
 
   def genre_select(name)
     # Iterates through genres and returns the genre if found
+
     @genres.each do |g|
       return g if g.name.downcase == name.downcase
     end
