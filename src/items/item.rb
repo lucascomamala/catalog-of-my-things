@@ -1,8 +1,8 @@
 require 'date'
 
 class Item
-  attr_reader :id, :archived, :genre, :author, :label
-  attr_accessor :publish_date
+  attr_reader :id, :genre, :author, :label
+  attr_accessor :publish_date, :archived
 
   # Constructor for Item object
   # Dates should saved as a Date object: Date.parse(YYYY/MM/DD)

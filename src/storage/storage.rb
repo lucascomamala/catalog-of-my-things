@@ -20,6 +20,22 @@ module Storage
     File.write(file_path, JSON.pretty_generate(object))
   end
 
+  def load_games
+    file = "./src/json/games.json"
+    list = []
+    if File.exist?(file) && !File.empty?(file)
+      JSON.parse(File.read(file)).each do |item|
+        game = Game.new(publish_date: item['publish_date'], multiplayer: item['multiplayer'], last_played: item['last_played'])
+        game.archived = item['archived']
+        game.label = label_select(item['label']['title'], item['label']['color'])
+        game.genre = genre_select(item['genre']['name'])
+        game.author = author_select(item['author']['first_name'], item['author']['last_name'])
+        list << game
+      end
+    end
+    list
+  end
+
   def save_books
     file_path = './src/json/books.json'
     books_object = []

@@ -7,6 +7,7 @@ require_relative 'modules/label_module'
 require_relative 'modules/music_module'
 require_relative 'associations/genre'
 require_relative 'modules/genre_module'
+require_relative 'modules/utils'
 
 require 'json'
 require_relative 'storage/storage'
@@ -24,12 +25,12 @@ class App
   include Storage
 
   def initialize
-    @games = []
+    @labels = load_labels || []
+    @genres = []
+    @authors = []
+    @games = load_games || []
     @music_albums = []
     @books = load_books || []
-    @genres = []
-    @labels = load_labels || []
-    @authors = []
   end
 
   HASH = {
