@@ -103,6 +103,13 @@ $  bundle exec rspec
 - GitHub: [@lucascomamala](https://github.com/lucascomamala)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucas-comamala/)
 
+
+👤 **Ashmal Zahra**
+
+- GitHub: [@ashmalzahra](https://github.com/ashmalzahra)
+- Twitter: [@AshmalZahraa](https://twitter.com/AshmalZahraa)
+- LinkedIn: [ashmal-zahra](https://www.linkedin.com/in/ashmal-zahra)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
