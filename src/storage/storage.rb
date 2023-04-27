@@ -7,17 +7,17 @@ module Storage
     save_books
     save_labels
     save_data('games')
+    save_data('authors')
   end
 
   def save_data(class_name)
     file_path = "./src/json/#{class_name}.json"
     object = []
     instance_variable_get("@#{class_name}").each do |item|
-      p item
       object << item.to_s
     end
     FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, object.to_json)
+    File.write(file_path, JSON.pretty_generate(object))
   end
 
   def save_books
