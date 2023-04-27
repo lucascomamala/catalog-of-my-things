@@ -52,7 +52,7 @@ module GameModule
       puts "\nNo added games yet! Please add some games."
     else
       puts "\nList of all games:"
-      @games.each_with_index do |g, i|
+      @games.each do |g|
         puts '{'
         puts "  Title: #{g.label.title}"
         puts "  Color: #{g.label.color}"

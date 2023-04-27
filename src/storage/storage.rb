@@ -21,7 +21,7 @@ module Storage
   end
 
   def load_games
-    file = "./src/json/games.json"
+    file = './src/json/games.json'
     list = []
     if File.exist?(file) && !File.empty?(file)
       JSON.parse(File.read(file)).each do |item|
@@ -37,7 +37,7 @@ module Storage
   end
 
   def load_authors
-    file = "./src/json/authors.json"
+    file = './src/json/authors.json'
     list = []
     if File.exist?(file) && !File.empty?(file)
       JSON.parse(File.read(file)).each do |item|
