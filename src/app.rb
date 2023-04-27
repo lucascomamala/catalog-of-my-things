@@ -11,7 +11,6 @@ require_relative 'modules/genre_module'
 require 'json'
 require_relative 'storage/storage'
 
-
 class App
   attr_accessor :books, :labels
 
@@ -23,7 +22,6 @@ class App
   include MusicModule
   include GenreModule
   include Storage
-
 
   def initialize
     @games = []
