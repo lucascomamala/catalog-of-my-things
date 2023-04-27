@@ -68,13 +68,8 @@ module Storage
     list = []
     if File.exist?(file) && !File.empty?(file)
       JSON.parse(File.read(file)).each do |item|
-<<<<<<< HEAD
         genres = Genre.new(item['name'])
         list << genres
-=======
-        genre = Genre.new(item['name'])
-        list << genre
->>>>>>> fc2b6a5dbc1f74b4e9278a7b36ffc7a4fd8507b8
       end
     end
     list

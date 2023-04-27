@@ -46,7 +46,7 @@ module Utils
       return g if g.name.downcase == name.downcase
     end
     # If no genre was found, we create and return new one
-    genre = Genre.new(item['name'])
+    genre = Genre.new(name)
     @genres << genre
     genre
   end
