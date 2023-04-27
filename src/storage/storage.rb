@@ -6,6 +6,18 @@ module Storage
     puts "All the data has been saved successfully.\n"
     save_books
     save_labels
+    save_data('games')
+  end
+
+  def save_data(class_name)
+    file_path = "./src/json/#{class_name}.json"
+    object = []
+    instance_variable_get("@#{class_name}").each do |item|
+      p item
+      object << item.to_s
+    end
+    FileUtils.mkdir_p(File.dirname(file_path))
+    File.write(file_path, object.to_json)
   end
 
   def save_books
