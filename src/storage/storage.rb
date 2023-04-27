@@ -1,6 +1,7 @@
 require 'json'
 require 'fileutils'
 
+# rubocop:disable Metrics/ModuleLength
 module Storage
   def preserve_data
     puts "All the data has been saved successfully.\n"
@@ -114,4 +115,5 @@ module Storage
     end
     list_labels
   end
+  # rubocop:enable Metrics/ModuleLength
 end
