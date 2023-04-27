@@ -1,0 +1,53 @@
+[
+  {
+    "multiplayer": false,
+    "last_played": "2023-05-03",
+    "publish_date": "2023-05-03",
+    "archived": false,
+    "genre": {
+      "name": "sda"
+    },
+    "label": {
+      "title": "sdfa",
+      "color": "df"
+    },
+    "author": {
+      "first_name": "dasf",
+      "last_name": "dsf"
+    }
+  },
+  {
+    "multiplayer": true,
+    "last_played": "2023-04-10",
+    "publish_date": "2023-04-10",
+    "archived": false,
+    "genre": {
+      "name": "dfs"
+    },
+    "label": {
+      "title": "jk",
+      "color": "jk"
+    },
+    "author": {
+      "first_name": "dfsj",
+      "last_name": "k"
+    }
+  },
+  {
+    "multiplayer": false,
+    "last_played": "2023-03-31",
+    "publish_date": "2023-12-30",
+    "archived": false,
+    "genre": {
+      "name": "lol"
+    },
+    "label": {
+      "title": "sae",
+      "color": "a"
+    },
+    "author": {
+      "first_name": "sacvx",
+      "last_name": "bl."
+    }
+  }
+]
