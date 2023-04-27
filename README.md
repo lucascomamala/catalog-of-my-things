@@ -110,6 +110,11 @@ $  bundle exec rspec
 - Twitter: [@AshmalZahraa](https://twitter.com/AshmalZahraa)
 - LinkedIn: [ashmal-zahra](https://www.linkedin.com/in/ashmal-zahra)
 
+👤 **Emmanuel Balikuddembe**
+
+- GitHub: [@Balikuddembe](https://github.com/Balikuddembe)
+- Twitter: [@BalixEmma](https://twitter.com/BalixEmma)
+- LinkedIn: [emmanuelbalikuddembe](https://www.linkedin.com/in/emmanuelbalikuddembe/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
