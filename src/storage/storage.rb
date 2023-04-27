@@ -48,6 +48,31 @@ module Storage
     list
   end
 
+  def load_music
+    file = './src/json/music_albums.json'
+    list = []
+    if File.exist?(file) && !File.empty?(file)
+      JSON.parse(File.read(file)).each do |item|
+        music_album = MusicAlbum.new(on_spotify: item['on_spotify'], publish_date: item['publish_date'])
+        list << music_album
+      end
+    end
+    list
+  end
+
+  def load_genres
+    file = './src/json/genres.json'
+    list = []
+    if File.exist?(file) && !File.empty?(file)
+      JSON.parse(File.read(file)).each do |item|
+        genres = Genre.new(item)
+        list << music_album
+      end
+    end
+    list
+  end
+
+
   def save_books
     file_path = './src/json/books.json'
     books_object = []
