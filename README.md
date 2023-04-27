@@ -71,7 +71,7 @@ $  git clone git@github.com:lucascomamala/catalog-of-my-things.git
 Install this project with:
 
 ```sh
-$  cd /catalog-of-my-things
+$  cd catalog-of-my-things
 $  bundle install
 ```
 
