@@ -1,0 +1,14 @@
+[
+  {
+    "title": "The Count of Monte Cristo",
+    "publisher": "Alexandre Dumas",
+    "cover_state": "good",
+    "publish_date": "1844-01-01"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "publisher": "J.D. Salinger",
+    "cover_state": "bad",
+    "publish_date": "1951/07/16"
+  }
+]

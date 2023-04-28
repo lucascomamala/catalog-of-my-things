@@ -1,0 +1,19 @@
+[
+  {
+    "multiplayer": true,
+    "last_played": "2020-03-03",
+    "publish_date": "1994-01-01",
+    "archived": false,
+    "genre": {
+      "name": "MOBA"
+    },
+    "label": {
+      "title": "League of Legends",
+      "color": "Blue"
+    },
+    "author": {
+      "first_name": "Riot",
+      "last_name": "Games"
+    }
+  }
+]
