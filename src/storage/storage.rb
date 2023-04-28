@@ -1,7 +1,6 @@
 require 'json'
 require 'fileutils'
 
-# rubocop:disable Metrics/ModuleLength
 module Storage
   def preserve_data
     puts "All the data has been saved successfully.\n"
@@ -75,25 +74,6 @@ module Storage
     list
   end
 
-  def save_books
-    file_path = './src/json/books.json'
-    books_object = []
-    @books.each do |book|
-      books_object << { title: book.title, publisher: book.publisher, cover_state: book.cover_state,
-                        publish_date: book.publish_date }
-    end
-    FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, JSON.pretty_generate(books_object))
-  end
-
-  def save_labels
-    file_path = './src/json/labels.json'
-    labels_object = []
-    @labels.each { |label| labels_object << { title: label.title, color: label.color } }
-    FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, JSON.pretty_generate(labels_object))
-  end
-
   def load_books
     file = './src/json/books.json'
     list_books = []
@@ -115,5 +95,4 @@ module Storage
     end
     list_labels
   end
-  # rubocop:enable Metrics/ModuleLength
 end

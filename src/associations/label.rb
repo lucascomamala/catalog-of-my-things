@@ -15,4 +15,8 @@ class Label
     @items << item unless @items.include?(item)
     item.label = self
   end
+
+  def to_s
+    { title: label.title, color: label.color }
+  end
 end
