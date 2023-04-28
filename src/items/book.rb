@@ -10,6 +10,10 @@ class Book < Item
     @cover_state = cover_state
   end
 
+  def to_s
+    { title: title, publisher: publisher, cover_state: cover_state, publish_date: publish_date }
+  end
+
   def can_be_archived?
     super || @cover_state == 'bad'
   end

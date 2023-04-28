@@ -1,53 +1,19 @@
 [
   {
-    "multiplayer": false,
-    "last_played": "2023-05-03",
-    "publish_date": "2023-05-03",
-    "archived": false,
-    "genre": {
-      "name": "sda"
-    },
-    "label": {
-      "title": "sdfa",
-      "color": "df"
-    },
-    "author": {
-      "first_name": "dasf",
-      "last_name": "dsf"
-    }
-  },
-  {
     "multiplayer": true,
-    "last_played": "2023-04-10",
-    "publish_date": "2023-04-10",
+    "last_played": "2020-03-03",
+    "publish_date": "1994-01-01",
     "archived": false,
     "genre": {
-      "name": "dfs"
+      "name": "MOBA"
     },
     "label": {
-      "title": "jk",
-      "color": "jk"
+      "title": "League of Legends",
+      "color": "Blue"
     },
     "author": {
-      "first_name": "dfsj",
-      "last_name": "k"
-    }
-  },
-  {
-    "multiplayer": false,
-    "last_played": "2023-03-31",
-    "publish_date": "2023-12-30",
-    "archived": false,
-    "genre": {
-      "name": "lol"
-    },
-    "label": {
-      "title": "sae",
-      "color": "a"
-    },
-    "author": {
-      "first_name": "sacvx",
-      "last_name": "bl."
+      "first_name": "Riot",
+      "last_name": "Games"
     }
   }
 ]

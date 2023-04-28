@@ -6,7 +6,6 @@ require_relative 'utils'
 module GameModule
   include Utils
 
-  # rubocop:disable Metrics/MethodLength
   def add_game
     # Gets publish date and validates it
     puts 'Enter game publish date (YYYY/MM/DD): '
@@ -69,5 +68,4 @@ module GameModule
     puts "\nPress Enter to return to main menu..."
     gets.chomp
   end
-  # rubocop:enable Metrics/MethodLength
 end

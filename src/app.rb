@@ -42,16 +42,15 @@ class App
     6 => :list_authors,
     7 => :add_book,
     8 => :add_music,
-    9 => :add_movie,
-    10 => :add_game,
-    11 => 'exit'
+    9 => :add_game,
+    10 => 'exit'
   }.freeze
 
   def run
     show_options
     option = gets.chomp.to_i
 
-    while option != 11
+    while option != 10
       select_option(option)
       show_options
       option = gets.chomp.to_i
