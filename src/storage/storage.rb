@@ -4,8 +4,8 @@ require 'fileutils'
 module Storage
   def preserve_data
     puts "All the data has been saved successfully.\n"
-    save_books
-    save_labels
+    save_data('books')
+    save_data('labels')
     save_data('games')
     save_data('authors')
     save_data('music_albums')

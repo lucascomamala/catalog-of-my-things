@@ -17,6 +17,6 @@ class Label
   end
 
   def to_s
-    { title: label.title, color: label.color }
+    { title: title, color: color }
   end
 end

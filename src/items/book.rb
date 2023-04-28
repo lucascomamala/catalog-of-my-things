@@ -11,8 +11,7 @@ class Book < Item
   end
 
   def to_s
-    { title: book.title, publisher: book.publisher, cover_state: book.cover_state,
-      publish_date: book.publish_date }
+    { title: title, publisher: publisher, cover_state: cover_state, publish_date: publish_date }
   end
 
   def can_be_archived?
