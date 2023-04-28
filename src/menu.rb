@@ -9,8 +9,7 @@ module Menu
         6 - List all authors
         7 - Add a book
         8 - Add a music album
-        9 - Add a movie
-        10 - Add a game
-        11 - Exit"
+        9 - Add a game
+        10 - Exit"
   end
 end
